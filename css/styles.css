@@ -1,0 +1,139 @@
+
+   /* Page 1 styles */
+   
+   #page1 {
+    background: url('../assets/background-app1.jpg') no-repeat center center #ffdd0f;
+   }
+
+  .title-h1__styles {
+    font-family: 'PichinchaSlab', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 70px; 
+    color: #9966f5; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .title-h2__styles {
+    font-family: 'PichinchaSans', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 40px; 
+    color: #000; 
+    text-align: center;
+    margin-top: 50px;
+    padding: 0;
+  }
+
+  .page1-next--margin_top {
+    margin-top: 80px;
+  }
+
+  /* Page 2 styles */
+  .title-h2__padding {
+    font-family: 'PichinchaSans', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 50px; 
+    color: #000; 
+    text-align: center;
+    margin-top: 170px;
+    padding: 0 130px;
+  }
+
+  .button-page2 {
+    margin-top: 225px; 
+  }
+
+  /* Page 3 styles */
+
+  .title-h2__page3 {
+    font-family: 'PichinchaSans', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 50px; 
+    color: #000; 
+    text-align: center;
+    margin-top: 170px;
+    padding: 0 200px;
+  }
+
+  .title-h3__page3 {
+    font-family: 'PichinchaSlab', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 60px; 
+    color: #9966f5; 
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 130px;
+  }
+
+  /* Page 4 styles */
+
+  .title-h2__page4 {
+    font-family: 'PichinchaSansBold', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 50px; 
+    color: #000; 
+    text-align: center;
+    margin-top: 540px;
+    padding: 0 200px;
+  }
+
+  .title-h3__page4 {
+    font-family: 'PichinchaSans', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 50px; 
+    color: #000; 
+    text-align: center;
+    margin-top: 30px;
+    padding: 0 280px;
+  }
+
+  .button-page4 {
+    margin-top: 200px;
+  }
+
+  #page4 {
+    background: url('../assets/background-app4.jpg') no-repeat center center #ffdd0f;
+  }
+    
+  /* Page 5 styles */
+
+  .title-h2__page5 {
+    font-family: 'PichinchaSans', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 50px; 
+    color: #000; 
+    text-align: center;
+    margin-top: 30px;
+    padding: 0 230px;
+  }
+
+  .title-h3__page5 {
+    font-family: 'PichinchaSans', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 50px; 
+    color: #000; 
+    text-align: center;
+    margin-top: 0px;
+    padding: 0 280px;
+  }
+
+  .title-h4__page5 {
+    font-family: 'PichinchaSlab', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 60px; 
+    color: #9966f5; 
+    text-align: center;
+    margin-top: 30px;
+    padding: 0 230px;
+  }
+  
+  #page5 {
+    background: url('../assets/background-app5.jpg') no-repeat center center #ffdd0f;
+  }
+
+  /* Page 6 styles */
+
+  #page6 {
+    background: url('../assets/background-app6.jpg') no-repeat center center #ffdd0f;
+  }

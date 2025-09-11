@@ -1,0 +1,61 @@
+  /* Custom fonts */
+  @font-face {
+    font-family: 'PichinchaSans';
+    src: url('../assets/fonts/PichinchaSans-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'PichinchaSansBold';
+    src: url('../assets/fonts/PichinchaSans-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'PichinchaSlab';
+    src: url('../assets/fonts/PichinchaSlab-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+   
+   /* Layout styles */
+   body, html {
+    margin: 0;
+    padding: 0;
+    width: 1080px;
+    height:  1920px;
+    overflow: hidden;
+    font-family: 'PichinchaSans', Arial, sans-serif;
+    background-color: #ffdd0f;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-align: center;
+  }
+
+  .page {
+    display: none;
+    flex-direction: column;
+    padding-top: 300px;
+    background: url('../assets/background-app.jpg') no-repeat center center;
+    width: 100%;
+    background-size: cover;
+    align-items: center;
+  }
+
+  .page.active {
+    display: flex;
+  }
+
+  .title__bold {
+    font-family: 'PichinchaSansBold', Arial, sans-serif;
+  }

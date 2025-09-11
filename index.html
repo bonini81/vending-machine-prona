@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vending Machine App</title>
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <!-- Page 1 -->
+    <section class="page active" id="page1">
+      <h1 class="title-h1__styles">BIENVENIDOS A</h1>
+        <img src="assets/logo2.png" alt="Logo2" style="width: 229px; height: 231px; margin-top: 90px;">
+          <img src="assets/workvivo2.png" alt="Logo2" style="width: 670px; height: 236px; margin-top: 40px;">
+    
+      <h2 class="title-h2__styles">La nueva herramienta de comunicación de</h2>  
+
+      <img src="assets/logo-banco-pichincha.png" alt="Logo2" style="width: 484px; height: 102px; margin-top: 40px;">
+        <a class="page1-next--margin_top" onclick="goToPage(2)">
+          <img src="assets/presiona-aqui.png" alt="Logo2" style="width: 311px; height: 311px;">
+        </a>
+      </section>
+
+    <!-- Page 2 -->
+    <section class="page" id="page2">
+   
+      <img src="assets/logo2.png" alt="Logo2" style="width: 229px; height: 231px; margin-top: 160px;">
+      <h2 class="title-h2__padding">Ahora con <span class="title__bold">workvivo</span> podrás estar
+        más conectado y encontrarás
+        nuevas funcionalidades que te
+        permitirán mantenerte
+        informado de todo lo que pasa en
+        <span class="title__bold">nuestro banco.</span></h2>  
+      <a class="button-page2" onclick="goToPage(3)">
+        <img src="assets/boton-siguiente.png" alt="Logo2" style="width: 409px; height: 109px;">
+      </a>
+    </section>
+
+    <!-- Page 3 -->
+    <section class="page" id="page3">
+      <img src="assets/reloj.png" alt="Logo2" style="width: 380px; height: 396px; margin-top: 10px;">
+      <h2 class="title-h2__page3"><span class="title__bold">Necesitarás</span> solo 5 minutos
+        para estar informado.</h2> 
+        
+        <h3 class="title-h3__page3">#infórmate en 5.</h3>
+      <a class="button-page2" onclick="goToPage(4)">
+        <img src="assets/boton-siguiente.png" alt="Logo2" style="width: 409px; height: 109px;">
+      </a>
+    </section>
+
+    <!-- Page 4 -->
+    <section class="page" id="page4">
+
+      <h2 class="title-h2__page4">Conéctate con el corazón
+        de nuestra cultura.</h2> 
+        
+        <h3 class="title-h3__page4"><span class="title__bold">Workvivo</span> es más
+        que una herramienta:
+        es nuestro espacio para
+        compartir.</h3>
+
+      <a class="button-page4" onclick="goToPage(5)">
+        <img src="assets/boton-siguiente.png" alt="Logo2" style="width: 409px; height: 109px;">
+      </a>
+    </section>
+
+    
+    <!-- Page 5 -->
+    <section class="page" id="page5">
+
+      <h2 class="title-h2__page5"><span class="title__bold">Podrás conectarte</span> desde cualquier lugar de nuestro país con la aplicación móvil.</h2> 
+        
+        <h3 class="title-h3__page5">explora workvivo e
+          <span class="title__bold">#infórmate en 5.</span></h3>
+
+          <h4 class="title-h4__page5">Escanea ¡ahora! y
+            recibe una sorpresa.</h4>
+    </section>
+
+    
+    
+    <!-- Page 6, Background Image Only-->
+    <section class="page" id="page6">
+    </section>
+  </main>
+  <script src="js/index.js"></script>
+</body>
+</html>
