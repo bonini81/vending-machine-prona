@@ -1,25 +1,68 @@
   /* Custom fonts */
   @font-face {
     font-family: 'PichinchaSans';
-    src: url('../assets/fonts/PichinchaSans-Regular.otf') format('opentype');
+    src: url('../assets/fonts2/PichinchaSans-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'PichinchaSansBold';
-    src: url('../assets/fonts/PichinchaSans-Bold.otf') format('opentype');
+    src: url('../assets/fonts2/PichinchaSans-Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'PichinchaSlab';
-    src: url('../assets/fonts/PichinchaSlab-Regular.otf') format('opentype');
+    src: url('../assets/fonts2/PichinchaSlab-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
    
+/* Fonts de Pronaca */
+@font-face {
+  font-family: 'BagossExtended';
+  src: 
+    url('../assets/fonts/BagossExtended-Bold.woff2') format('woff2'), /* Modern Browsers */
+    url('../assets/fonts/BagossExtended-Bold.woff') format('woff'),   /* Good Fallback */
+    url('../assets/fonts/BagossExtended-Bold.otf') format('opentype'); /* Legacy Fallback */
+  font-weight: 700; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BagossExtended';
+  src: 
+    url('../assets/fonts/BagossExtended-Regular.woff2') format('woff2'),
+    url('../assets/fonts/BagossExtended-Regular.woff') format('woff'),
+    url('../assets/fonts/BagossExtended-Regular.otf') format('opentype');
+  font-weight: 400; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BagossExtended';
+  src: 
+    url('../assets/fonts/BagossExtended-Light.woff2') format('woff2'),
+    url('../assets/fonts/BagossExtended-Light.woff') format('woff'),
+    url('../assets/fonts/BagossExtended-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Arial';
+  src: 
+    url('../assets/fonts/Arial.woff2') format('woff2'),
+    url('../assets/fonts/Arial.woff') format('woff');
+  font-weight: normal; 
+  font-style: normal;
+}
+
+
+
    /* Layout styles */
    body, html {
     margin: 0;
@@ -27,8 +70,9 @@
     width: 1080px;
     height:  1920px;
     overflow: hidden;
-    font-family: 'PichinchaSans', Arial, sans-serif;
-    background-color: #ffdd0f;
+    font-family: 'BagossExtended', Arial, sans-serif;
+    font-weight: 400;
+    background-color: #fff;
   }
 
   .container {
@@ -37,8 +81,9 @@
     height: 100%;
     background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    color: black;
+    color: #6d0a58;
     text-align: center;
   }
 
@@ -46,7 +91,7 @@
     display: none;
     flex-direction: column;
     padding-top: 300px;
-    background: url('../assets/background-app.jpg') no-repeat center center;
+   /*background: url('../assets/background-app.jpg') no-repeat center center; */
     width: 100%;
     background-size: cover;
     align-items: center;
@@ -59,3 +104,22 @@
   .title__bold {
     font-family: 'PichinchaSansBold', Arial, sans-serif;
   }
+
+  .footer--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffcfff;
+  padding: 16px;
+  border-top: 1px solid #e7e7e7;
+}
+
+.p-footer--styles {
+  font-family: 'BagossExtended', Arial, sans-serif;
+  font-weight: 700;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
