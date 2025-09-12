@@ -1,25 +1,4 @@
-  /* Custom fonts */
-  @font-face {
-    font-family: 'PichinchaSans';
-    src: url('../assets/fonts2/PichinchaSans-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
 
-  @font-face {
-    font-family: 'PichinchaSansBold';
-    src: url('../assets/fonts2/PichinchaSans-Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'PichinchaSlab';
-    src: url('../assets/fonts2/PichinchaSlab-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-   
 /* Fonts de Pronaca */
 @font-face {
   font-family: 'BagossExtended';
@@ -82,7 +61,7 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     color: #6d0a58;
     text-align: center;
   }
@@ -90,7 +69,7 @@
   .page {
     display: none;
     flex-direction: column;
-    padding-top: 300px;
+    padding-top: 50px;
    /*background: url('../assets/background-app.jpg') no-repeat center center; */
     width: 100%;
     background-size: cover;
@@ -102,8 +81,22 @@
   }
 
   .title__bold {
-    font-family: 'PichinchaSansBold', Arial, sans-serif;
+    font-family: 'BagossExtended', Arial, sans-serif;
   }
+
+  .welcome-subtitle {
+    font-family: 'BagossExtended', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 10px 20px;
+  }
+
+  .welcome-content {
+  margin: 0px auto;
+  display: block;
+  padding: 0px 100px;
+}
 
   .footer--container {
   display: flex;
