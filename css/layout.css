@@ -82,7 +82,7 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     color: #6d0a58;
     text-align: center;
   }
