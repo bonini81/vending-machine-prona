@@ -84,6 +84,20 @@
     font-family: 'BagossExtended', Arial, sans-serif;
   }
 
+  .welcome-subtitle {
+    font-family: 'BagossExtended', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 10px 20px;
+  }
+
+  .welcome-content {
+  margin: 0px auto;
+  display: block;
+  padding: 0px 100px;
+}
+
   .footer--container {
   display: flex;
   flex-direction: row;
