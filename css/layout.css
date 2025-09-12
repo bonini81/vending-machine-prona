@@ -83,19 +83,30 @@
   .title__bold {
     font-family: 'BagossExtended', Arial, sans-serif;
   }
-
+  .welcome-title {
+    font-family: 'BagossExtended', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.4;
+    margin-top: 50px;
+  }
   .welcome-subtitle {
     font-family: 'BagossExtended', Arial, sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 27px;
     line-height: 1.4;
-    margin: 10px 20px;
+    margin-top: 40px;
   }
 
   .welcome-content {
   margin: 0px auto;
   display: block;
-  padding: 0px 100px;
+  padding: 0px 150px;
+  text-align: center;
+}
+
+.bar-digital-epic {
+  margin-top: 100px;
 }
 
   .footer--container {
@@ -115,4 +126,19 @@
   font-size: 14px;
   line-height: 1.4;
   margin: 0;
+}
+
+.start-button {
+  font-family: BagossExtended,Arial,sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  text-transform: none;
+  box-shadow: none;
+  transition: background-color .3s ease,color .3s ease;
+  background-color: #ed2c29;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 10px 0;
+  border: none;
+  margin-top: 75px;
 }
