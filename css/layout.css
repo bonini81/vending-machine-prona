@@ -90,7 +90,7 @@
   .page {
     display: none;
     flex-direction: column;
-    padding-top: 300px;
+    padding-top: 50px;
    /*background: url('../assets/background-app.jpg') no-repeat center center; */
     width: 100%;
     background-size: cover;
