@@ -9,58 +9,82 @@
 </head>
 <body>
   <main class="container">
+  
+  <!-- Page 1: Welcome/Start Page -->
+  <section class="page active" id="welcome-page">
+    <header class="header--container">
+      <img alt="Pronaca logo" src="assets/images/header.png">
+    </header>
+   
+    <div class="welcome-content">
+      <img src="assets/images/epic-bar.png" alt="Bar Digital Bar" class="bar-digital-epic">
+      <h1 class="welcome-title">Nuestra organización se está transformando tecnológicamente en sus herramientas CORE.</h1>
+      <h2 class="welcome-subtitle">Este cambio es nuestro proyecto EPIC, del cual la implementación de SAP forma parte importante.</h2> 
+      <h2 class="welcome-subtitle">EPIC trae consigo las mejores prácticas para optimizar nuestras herramientas tecnológicas y hacer más eficientes nuestros procesos.</h2>     
+      <h2 class="welcome-subtitle">Lo estamos construyendo paso a paso, como este mocktail que combina los mejores ingredientes para obtener el mejor resultado.</h2>
+      <button class="start-button" onclick="startCocktailExperience()">
+       Iniciar Preparación
+      </button>
+    </div>
+    <figure class="cocktail-glass">
+      <img src="assets/images/formBackGround.png" alt="Cocktail Glass" class="cocktail-glass-image">
+    </figure>
     
-    <!-- Page 1: Welcome/Start Page (Same for all cocktails) -->
-    <section class="page active" id="welcome-page">
-       <header class="header--container MuiBox-root css-0">
-        <img alt="Pronaca logo" src="assets/images/header.png">
-      </header>
-     
-      <div class="welcome-content">
-        <img src="assets/images/epic-bar.png" alt="Bar Digital Bar" class="bar-digital-epic">
-        <h1 class="welcome-title">Nuestra organización se está transformando
-tecnológicamente en sus herramientas CORE. </h1>
-        <h2 class="welcome-subtitle">Este cambio es nuestro proyecto EPIC, del cual la implementación de SAP forma parte importante.</h2> 
- <h2 class="welcome-subtitle">EPIC trae consigo las mejores prácticas para optimizar nuestras herramientas tecnológicas y hacer más eficientes nuestros procesos.</h2>     
- <h2 class="welcome-subtitle">Lo estamos construyendo paso a paso, como este mocktail que combina los mejores ingredientes para obtener el mejor resultado.</h2>
-        <button class="start-button" onclick="startCocktailExperience()">
-         Iniciar Preparación
-        </button>
-      </div>
-    </section>
-
-    <!-- Page 2: Video Page (Different video for each cocktail) -->
-    <section class="page" id="video-page">
-      <div class="video-content">
-        <h2 class="video-title" id="cocktail-name">Preparando tu cóctel...</h2>
-        <div class="video-container">
-          <video id="cocktail-video" width="800" height="600" autoplay muted>
-            <source src="" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-          </video>
-        </div>
-      </div>
-    </section>
-
-    <!-- Page 3: Final Cocktail Page (Different for each cocktail) -->
-    <section class="page" id="final-page">
-      <div class="final-content">
-        <h2 class="final-title" id="final-message">¡Disfruta tu cóctel!</h2>
-        <div class="cocktail-image-container">
-          <img id="cocktail-final-image" src="" alt="Cóctel terminado" class="cocktail-final-image">
-        </div>
-        <p class="final-description" id="final-description">Tu delicioso cóctel está listo para disfrutar</p>
-      </div>
-    </section>
-       <footer class="footer--container MuiBox-root css-0">
+    <footer class="footer--container">
       <p class="p-footer--styles">Somos una familia que sirve <br />con respeto para alimentar bien 
       <img src="assets/images/corazon.svg" alt="Heart icon" width="17px" height="17px">
       </p>  
-      
-        <img alt="Pronaca logo" width="77px" height="30px" src="assets/images/LogoPronacaFooter.png">
+      <img alt="Pronaca logo" width="77px" height="30px" src="assets/images/LogoPronacaFooter.png">
     </footer>
-   
-  </main>
+  </section>
+
+  <!-- Page 2: Video Page -->
+  <section class="page" id="video-page">
+    <header class="header--container">
+      <img alt="Pronaca logo" src="assets/images/header.png">
+    </header>
+    
+    <div class="video-content">
+      <h2 class="video-title" id="cocktail-name">Preparando tu cóctel...</h2>
+      <div class="video-container">
+        <video id="cocktail-video" width="800" height="600" autoplay muted>
+          <source src="" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+    </div>
+    
+    <footer class="footer--container">
+      <p class="p-footer--styles">Somos una familia que sirve <br />con respeto para alimentar bien 
+      <img src="assets/images/corazon.svg" alt="Heart icon" width="17px" height="17px">
+      </p>  
+      <img alt="Pronaca logo" width="77px" height="30px" src="assets/images/LogoPronacaFooter.png">
+    </footer>
+  </section>
+
+  <!-- Page 3: Final Cocktail Page -->
+  <section class="page" id="final-page">
+    <header class="header--container">
+      <img alt="Pronaca logo" src="assets/images/header.png">
+    </header>
+    
+    <div class="final-content">
+      <h2 class="final-title" id="final-message">¡Disfruta tu cóctel!</h2>
+      <div class="cocktail-image-container">
+        <img id="cocktail-final-image" src="" alt="Cóctel terminado" class="cocktail-final-image">
+      </div>
+      <p class="final-description" id="final-description">Tu delicioso cóctel está listo para disfrutar</p>
+    </div>
+    
+    <footer class="footer--container">
+      <p class="p-footer--styles">Somos una familia que sirve <br />con respeto para alimentar bien 
+      <img src="assets/images/corazon.svg" alt="Heart icon" width="17px" height="17px">
+      </p>  
+      <img alt="Pronaca logo" width="77px" height="30px" src="assets/images/LogoPronacaFooter.png">
+    </footer>
+  </section>
+
+</main>
 
   <script src="js/index.js"></script>
 </body>
