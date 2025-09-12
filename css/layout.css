@@ -1,25 +1,4 @@
-  /* Custom fonts */
-  @font-face {
-    font-family: 'PichinchaSans';
-    src: url('../assets/fonts2/PichinchaSans-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
 
-  @font-face {
-    font-family: 'PichinchaSansBold';
-    src: url('../assets/fonts2/PichinchaSans-Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'PichinchaSlab';
-    src: url('../assets/fonts2/PichinchaSlab-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-   
 /* Fonts de Pronaca */
 @font-face {
   font-family: 'BagossExtended';
@@ -102,7 +81,7 @@
   }
 
   .title__bold {
-    font-family: 'PichinchaSansBold', Arial, sans-serif;
+    font-family: 'BagossExtended', Arial, sans-serif;
   }
 
   .footer--container {
