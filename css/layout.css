@@ -78,6 +78,8 @@
   flex-shrink: 0; /* Prevent header from shrinking */
 }
 
+
+
   .page.active {
     display: flex;
   }
@@ -115,10 +117,11 @@
   margin-bottom: -40px;
   z-index: 1;
   background: white;
+  padding: 0 120px;
 }
 
 .bar-digital-epic {
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 .cocktail-glass {
@@ -169,7 +172,13 @@
   background-color: #ed2c29;
   color: #fff;
   padding: 15px 30px;
-  border-radius: 10px 0;
+  border-radius: 25px 0;
   border: none;
-  margin-top: 75px;
+  margin-top: 25px;
+}
+
+/* Page 2 */
+header--container-video {
+  margin-top: 0px;
+  flex-shrink: 0; /* Prevent header from shrinking */
 }
