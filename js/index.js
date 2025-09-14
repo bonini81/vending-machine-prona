@@ -19,7 +19,7 @@ const cocktails = [
     {
         id: 3,
         name: "Piña Colada Tropical",
-        video: "assets/videos/pina-colada-video.mp4",
+        video: "assets/videos/selva1.mov",
         finalImage: "assets/images/pina-colada-final.jpg",
         finalMessage: "¡Disfruta tu Piña Colada!",
         description: "Un sabor tropical que te transportará al paraíso"
@@ -27,7 +27,7 @@ const cocktails = [
     {
         id: 4,
         name: "Old Fashioned",
-        video: "assets/videos/old-fashioned-video.mp4",
+        video: "assets/videos/selva2.mp4",
         finalImage: "assets/images/old-fashioned-final.jpg",
         finalMessage: "¡Tu Old Fashioned está servido!",
         description: "Un clásico atemporal con carácter y personalidad"
@@ -89,7 +89,7 @@ function showVideoPage() {
     clearTimeout(videoTimer);
     videoTimer = setTimeout(() => {
         showFinalPage();
-    }, 30000); // 30 seconds
+    }, 15000); // 30 seconds
 }
 
 function showFinalPage() {
@@ -111,7 +111,7 @@ function showFinalPage() {
     clearTimeout(finalPageTimer);
     finalPageTimer = setTimeout(() => {
         nextCocktail();
-    }, 60000); // 1 minute
+    }, 15000); // 1 minute
 }
 
 function nextCocktail() {
@@ -125,7 +125,7 @@ function nextCocktail() {
     clearTimeout(welcomePageTimer);
     welcomePageTimer = setTimeout(() => {
         showVideoPage();
-    }, 30000); // 30 seconds on welcome page
+    }, 15000); // 30 seconds on welcome page
 }
 
 // Video event listeners
