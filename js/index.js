@@ -3,7 +3,7 @@ const cocktails = [
     {
         id: 1,
         name: "Martini Clásico",
-        video: "assets/videos/martini-video.mp4",
+        video: "assets/videos/selva1.mov",
         finalImage: "assets/images/martini-final.jpg",
         finalMessage: "¡Aquí tienes tu Martini Clásico!",
         description: "Un clásico elegante y sofisticado. ¡Disfrútalo!"
