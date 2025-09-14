@@ -40,6 +40,7 @@ let currentPage = 'welcome';
 let videoTimer = null;
 let finalPageTimer = null;
 let welcomePageTimer = null;
+let appStarted = false; // Flag to track if app has been started
 
 // Page navigation functions
 function showPage(pageId) {
@@ -56,8 +57,12 @@ function showPage(pageId) {
 }
 
 function startCocktailExperience() {
-    // Clear welcome page timer when user manually starts
+    // Mark app as started
+    appStarted = true;
+    
+    // Clear any existing timers
     clearTimeout(welcomePageTimer);
+    
     // Start with the current cocktail
     showVideoPage();
 }
@@ -82,14 +87,14 @@ function showVideoPage() {
     // Play video
     video.play().catch(e => {
         console.log('Error playing video:', e);
-        // If video fails, continue to final page after 30 seconds
+        // If video fails, continue to final page after 15 seconds
     });
     
-    // Set timer for 30 seconds to go to final page
+    // Set timer for 15 seconds to go to final page
     clearTimeout(videoTimer);
     videoTimer = setTimeout(() => {
         showFinalPage();
-    }, 15000); // 30 seconds
+    }, 15000); // 15 seconds
 }
 
 function showFinalPage() {
@@ -107,11 +112,11 @@ function showFinalPage() {
     // Show final page
     showPage('final-page');
     
-    // Set timer for 1 minute to go back to welcome page
+    // Set timer for 15 seconds to go back to welcome page
     clearTimeout(finalPageTimer);
     finalPageTimer = setTimeout(() => {
         nextCocktail();
-    }, 15000); // 1 minute
+    }, 15000); // 15 seconds
 }
 
 function nextCocktail() {
@@ -121,11 +126,14 @@ function nextCocktail() {
     // Go back to welcome page
     showPage('welcome-page');
     
-    // Set timer for 30 seconds on welcome page to auto-start next cocktail
-    clearTimeout(welcomePageTimer);
-    welcomePageTimer = setTimeout(() => {
-        showVideoPage();
-    }, 15000); // 30 seconds on welcome page
+    // Only auto-start if app has been started before
+    if (appStarted) {
+        // Set timer for 15 seconds on welcome page to auto-start next cocktail
+        clearTimeout(welcomePageTimer);
+        welcomePageTimer = setTimeout(() => {
+            showVideoPage();
+        }, 15000); // 15 seconds on welcome page
+    }
 }
 
 // Video event listeners
@@ -152,16 +160,12 @@ function setupVideoEvents() {
 document.addEventListener('DOMContentLoaded', () => {
     setupVideoEvents();
     
-    // Start on welcome page
+    // Start on welcome page (but don't auto-start the experience)
     showPage('welcome-page');
-    
-    // Start the infinite loop after initial load (optional - remove if you want manual start only)
-    welcomePageTimer = setTimeout(() => {
-        showVideoPage();
-    }, 30000); // Auto-start after 30 seconds on first load
     
     console.log('Cocktail Vending Machine App initialized');
     console.log(`Total cocktails: ${cocktails.length}`);
+    console.log('Waiting for user to click "Iniciar Preparación"...');
 });
 
 // Cleanup timers when page unloads
