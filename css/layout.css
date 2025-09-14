@@ -103,9 +103,7 @@
   }
 
 /* Content takes up remaining space and centers itself */
-.welcome-content,
-.video-content,
-.final-content {
+.welcome-content {
   flex: 1; /* Take up remaining space */
   display: flex;
   flex-direction: column;
@@ -115,6 +113,19 @@
   border-radius: 0px 0px 40px 40px;
   border: 2px solid white;
   margin-bottom: -40px;
+  z-index: 1;
+  background: white;
+  padding: 0 120px;
+}
+
+.video-content,
+.final-content {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 2rem;
   z-index: 1;
   background: white;
   padding: 0 120px;
@@ -178,7 +189,7 @@
 }
 
 /* Page 2 */
-header--container-video {
+.header--container-video {
   margin-top: 0px;
   flex-shrink: 0; /* Prevent header from shrinking */
 }
