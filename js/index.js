@@ -11,7 +11,7 @@ const cocktails = [
     {
         id: 2,
         name: "Mojito Refrescante",
-        video: "assets/videos/mojito-video.mp4",
+        video: "assets/videos/selva2.mp4",
         finalImage: "assets/images/mojito-final.jpg",
         finalMessage: "¡Tu Mojito está listo!",
         description: "Fresco, mentolado y delicioso. ¡Perfecto para cualquier momento!"
@@ -39,6 +39,7 @@ let currentCocktailIndex = 0;
 let currentPage = 'welcome';
 let videoTimer = null;
 let finalPageTimer = null;
+let welcomePageTimer = null;
 
 // Page navigation functions
 function showPage(pageId) {
@@ -55,11 +56,16 @@ function showPage(pageId) {
 }
 
 function startCocktailExperience() {
-    // Start with the first cocktail (or continue rotation)
+    // Clear welcome page timer when user manually starts
+    clearTimeout(welcomePageTimer);
+    // Start with the current cocktail
     showVideoPage();
 }
 
 function showVideoPage() {
+    // Clear welcome page timer
+    clearTimeout(welcomePageTimer);
+    
     const currentCocktail = cocktails[currentCocktailIndex];
     
     // Update video page content
@@ -87,6 +93,10 @@ function showVideoPage() {
 }
 
 function showFinalPage() {
+    // Clear any existing timers
+    clearTimeout(videoTimer);
+    clearTimeout(welcomePageTimer);
+    
     const currentCocktail = cocktails[currentCocktailIndex];
     
     // Update final page content
@@ -110,6 +120,12 @@ function nextCocktail() {
     
     // Go back to welcome page
     showPage('welcome-page');
+    
+    // Set timer for 30 seconds on welcome page to auto-start next cocktail
+    clearTimeout(welcomePageTimer);
+    welcomePageTimer = setTimeout(() => {
+        showVideoPage();
+    }, 30000); // 30 seconds on welcome page
 }
 
 // Video event listeners
@@ -139,6 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start on welcome page
     showPage('welcome-page');
     
+    // Start the infinite loop after initial load (optional - remove if you want manual start only)
+    welcomePageTimer = setTimeout(() => {
+        showVideoPage();
+    }, 30000); // Auto-start after 30 seconds on first load
+    
     console.log('Cocktail Vending Machine App initialized');
     console.log(`Total cocktails: ${cocktails.length}`);
 });
@@ -147,4 +168,5 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('beforeunload', () => {
     clearTimeout(videoTimer);
     clearTimeout(finalPageTimer);
+    clearTimeout(welcomePageTimer);
 });
