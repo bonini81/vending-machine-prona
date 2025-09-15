@@ -94,7 +94,7 @@ function showVideoPage() {
     clearTimeout(videoTimer);
     videoTimer = setTimeout(() => {
         showFinalPage();
-    }, 75000); // 15 seconds
+    }, 15000); // 15 seconds
 }
 
 function showFinalPage() {
