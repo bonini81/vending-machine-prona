@@ -193,3 +193,7 @@
   margin-top: 0px;
   flex-shrink: 0; /* Prevent header from shrinking */
 }
+
+.cocktail-glass-video {
+  margin-bottom: 50px;
+}
