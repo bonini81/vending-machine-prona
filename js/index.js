@@ -3,7 +3,7 @@ const cocktails = [
     {
         id: 1,
         name: "Martini Clásico",
-        video: "assets/videos/martini-video.mp4",
+        video: "assets/videos/selva1.mov",
         finalImage: "assets/images/martini-final.jpg",
         finalMessage: "¡Aquí tienes tu Martini Clásico!",
         description: "Un clásico elegante y sofisticado. ¡Disfrútalo!"
@@ -11,7 +11,7 @@ const cocktails = [
     {
         id: 2,
         name: "Mojito Refrescante",
-        video: "assets/videos/mojito-video.mp4",
+        video: "assets/videos/selva2.mp4",
         finalImage: "assets/images/mojito-final.jpg",
         finalMessage: "¡Tu Mojito está listo!",
         description: "Fresco, mentolado y delicioso. ¡Perfecto para cualquier momento!"
@@ -19,7 +19,7 @@ const cocktails = [
     {
         id: 3,
         name: "Piña Colada Tropical",
-        video: "assets/videos/pina-colada-video.mp4",
+        video: "assets/videos/selva1.mov",
         finalImage: "assets/images/pina-colada-final.jpg",
         finalMessage: "¡Disfruta tu Piña Colada!",
         description: "Un sabor tropical que te transportará al paraíso"
@@ -27,7 +27,7 @@ const cocktails = [
     {
         id: 4,
         name: "Old Fashioned",
-        video: "assets/videos/old-fashioned-video.mp4",
+        video: "assets/videos/selva2.mp4",
         finalImage: "assets/images/old-fashioned-final.jpg",
         finalMessage: "¡Tu Old Fashioned está servido!",
         description: "Un clásico atemporal con carácter y personalidad"
@@ -39,6 +39,8 @@ let currentCocktailIndex = 0;
 let currentPage = 'welcome';
 let videoTimer = null;
 let finalPageTimer = null;
+let welcomePageTimer = null;
+let appStarted = false; // Flag to track if app has been started
 
 // Page navigation functions
 function showPage(pageId) {
@@ -55,11 +57,20 @@ function showPage(pageId) {
 }
 
 function startCocktailExperience() {
-    // Start with the first cocktail (or continue rotation)
+    // Mark app as started
+    appStarted = true;
+    
+    // Clear any existing timers
+    clearTimeout(welcomePageTimer);
+    
+    // Start with the current cocktail
     showVideoPage();
 }
 
 function showVideoPage() {
+    // Clear welcome page timer
+    clearTimeout(welcomePageTimer);
+    
     const currentCocktail = cocktails[currentCocktailIndex];
     
     // Update video page content
@@ -76,17 +87,21 @@ function showVideoPage() {
     // Play video
     video.play().catch(e => {
         console.log('Error playing video:', e);
-        // If video fails, continue to final page after 30 seconds
+        // If video fails, continue to final page after 15 seconds
     });
     
-    // Set timer for 30 seconds to go to final page
+    // Set timer for 15 seconds to go to final page
     clearTimeout(videoTimer);
     videoTimer = setTimeout(() => {
         showFinalPage();
-    }, 30000); // 30 seconds
+    }, 15000); // 15 seconds
 }
 
 function showFinalPage() {
+    // Clear any existing timers
+    clearTimeout(videoTimer);
+    clearTimeout(welcomePageTimer);
+    
     const currentCocktail = cocktails[currentCocktailIndex];
     
     // Update final page content
@@ -97,11 +112,11 @@ function showFinalPage() {
     // Show final page
     showPage('final-page');
     
-    // Set timer for 1 minute to go back to welcome page
+    // Set timer for 15 seconds to go back to welcome page
     clearTimeout(finalPageTimer);
     finalPageTimer = setTimeout(() => {
         nextCocktail();
-    }, 60000); // 1 minute
+    }, 15000); // 15 seconds
 }
 
 function nextCocktail() {
@@ -110,6 +125,15 @@ function nextCocktail() {
     
     // Go back to welcome page
     showPage('welcome-page');
+    
+    // Only auto-start if app has been started before
+    if (appStarted) {
+        // Set timer for 15 seconds on welcome page to auto-start next cocktail
+        clearTimeout(welcomePageTimer);
+        welcomePageTimer = setTimeout(() => {
+            showVideoPage();
+        }, 15000); // 15 seconds on welcome page
+    }
 }
 
 // Video event listeners
@@ -136,15 +160,17 @@ function setupVideoEvents() {
 document.addEventListener('DOMContentLoaded', () => {
     setupVideoEvents();
     
-    // Start on welcome page
+    // Start on welcome page (but don't auto-start the experience)
     showPage('welcome-page');
     
     console.log('Cocktail Vending Machine App initialized');
     console.log(`Total cocktails: ${cocktails.length}`);
+    console.log('Waiting for user to click "Iniciar Preparación"...');
 });
 
 // Cleanup timers when page unloads
 window.addEventListener('beforeunload', () => {
     clearTimeout(videoTimer);
     clearTimeout(finalPageTimer);
+    clearTimeout(welcomePageTimer);
 });
