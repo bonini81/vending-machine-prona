@@ -197,3 +197,17 @@
 .cocktail-glass-video {
   margin-bottom: 50px;
 }
+
+#cocktail-video {
+  width: 800px;
+  height: 600px;
+  max-width: 100%; /* Prevent overflow */
+  object-fit: cover; /* or 'contain' depending on your preference */
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

@@ -3,7 +3,7 @@ const cocktails = [
     {
         id: 1,
         name: "Martini Clásico",
-        video: "assets/videos/selva1.mov",
+        video: "assets/videos/selva1.mp4",
         finalImage: "assets/images/martini-final.jpg",
         finalMessage: "¡Aquí tienes tu Martini Clásico!",
         description: "Un clásico elegante y sofisticado. ¡Disfrútalo!"
@@ -19,7 +19,7 @@ const cocktails = [
     {
         id: 3,
         name: "Piña Colada Tropical",
-        video: "assets/videos/selva1.mov",
+        video: "assets/videos/selva1.mp4",
         finalImage: "assets/images/pina-colada-final.jpg",
         finalMessage: "¡Disfruta tu Piña Colada!",
         description: "Un sabor tropical que te transportará al paraíso"
